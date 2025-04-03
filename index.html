@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+   
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "sidebar-left main sidebar-right"
+        "footer footer footer";
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+}
+
+.header {
+    grid-area: header;
+    background: lightgray;
+    padding: 20px;
+}
+
+.nav {
+    grid-area: nav;
+    background: lightgreen;
+    padding: 15px;
+}
+
+.sidebar-left {
+    grid-area: sidebar-left;
+    background: lightblue;
+    padding: 20px;
+}
+
+.main-content {
+    grid-area: main;
+    background: white;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.sidebar-right {
+    grid-area: sidebar-right;
+    background: lightblue;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background: lightgray;
+    padding: 20px;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="nav">Navigation Menu</div>
+        <div class="sidebar-left">Content</div>
+        <div class="main-content">Main Content</div>
+        <div class="sidebar-right">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
